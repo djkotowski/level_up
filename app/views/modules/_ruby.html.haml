@@ -45,11 +45,30 @@
   = exercise_block_for "meaningful_names" do |e|
     - e.question "You're never going to guess how this goes. Refactor your dino_catalog code!"
 
-  %p Finally, once you've written your masterpiece code, it's important to remember that conciseness in the code has to be less important than others' ability to understand it. You should already be doing code review with your peers (and hopefully with people with much more experience than yourself). If they don't understand the code quickly, it means that you won't either a month from now, and that's a problem.
+  %p Once you've written your masterpiece code, it's important to remember that conciseness in the code has to be less important than others' ability to understand it. You should already be doing code review with your peers (and hopefully with people with much more experience than yourself). If they don't understand the code quickly, it means that you won't either a month from now, and that's a problem.
 
   = exercise_block_for "fivesecond" do |e|
     - e.question "Explain how the Five Second Rule for code review works."
     - e.question "Look back through your code and find any places where your code is unnecessarily clever. Refactor."
+
+  %p Another source of insanity is the over-engineering of code. When asked to implement a simple service to save user data, you end up with a system that can do everything short of opening a pet shop. While extensibility and abstraction are powerful and useful concepts for our software, they are not the only concern.
+  %p This <a href='http://c2.com/cgi/wiki?YouArentGonnaNeedIt'>fantastic article</a> has a good explanation. The <a href="https://en.wikipedia.org/wiki/You_aren't_gonna_need_it#Rationale">wiki article</a> provides some solid rationale too. A slight counter-argument to the overuse of YAGNI is in <a href='http://www.skorks.com/2009/08/does-yagni-mean-you-ignore-the-obvious/'>this blog-post</a>.
+  = exercise_block_for "yagni" do |e|
+    - e.question "Explain how YAGNI improves the quality of our code."
+    - e.question "If we follow YAGNI, explain how we can still make intelligent decisions about features we may need."
+    - e.question "Explain the role of proper encapsulation and loose coupling in following the convention."
+  %p Perhaps related to YAGNI, but as more of a code-organization principle, we have DRY. You've probably heard of this one before: we don't want duplication representations of knowledge in the system. 
+  %p Remember that DRY is about knowledge in your system, not just code duplication. This <a href='http://www.rubytapas.com/episodes/89-Coincidental-Duplication'>Ruby Tapas</a> has a great example of the overuse of this principle.
+  = exercise_block_for "dry" do |e|
+    - e.question "Name some techniques we can use to de-duplicate code."
+    - e.question "Look back at the code you've written and see if you can dry up any of it."
+    - e.question "Dry code is a virtue, but sometimes we go too far. Show an example of being too dry, and how to counteract it."
+
+  %p Let's talk about magical numbers and values. <a href='http://mikeymurph.me/magical-values/'>This article</a> has a great overview on what they are and why they're harmful.
+  = exercise_block_for "magic" do |e|
+    - e.question "Explain the problem with the use of magic numbers and constants."
+    - e.question "Give an example of the use of 'magic numbers', and suggest a possible refactor."
+    - e.question "Personally, I see people get too focused on this one sometimes. Can you name an example where moving away from 'magic' values isn't actually helpful?"
 
 .page-header
   %h3 Comments (and Why We Tend to Avoid Them)
