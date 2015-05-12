@@ -92,3 +92,16 @@
 
   = exercise_block_for "comments2" do |e|
     - e.question "So, I lied above obviously. Sometimes comments are actually necessary. Name (and defend) some cases where you should add comments to your code."
+
+.page-header
+  %h3 A Little Kindness for Others
+  %p Let's talk about some human-factors kind of stuff. Since you'll be engineering in a team and maybe even writing software that other people use, it makes sense to cover some bases on how to work with other people when building that software.
+  %p Since much of your work will probably be API-related these days, let's inject a bit of sanity into your API design. Read <a href='http://semver.org/'>this site</a> and become enlightened.
+  = exercise_block_for "versioning" do |e|
+    - e.question "Explain the situations under which you bump the patch / minor / major version number on your software."
+    - e.question "How does that versioning relate to the consumers of your code?"
+  %p You may have thought that since we write "self-documenting" code that you were off the hook for writing any kind of documentation. Nope! Your codebase should have a useful README that explains how to set up and run the software, some example usage, and any gotchas people should know about. This kind of documentation is necessary for others to use your project, even if it's been well structured.
+  = exercise_block_for "documentation" do |e|
+    - e.question "What is a useful level of documentation?"
+    - e.question "How much documentation is enough? How much is too much? How can we balance those needs?"
+    - e.question "Add some useful documentation to your existing code."
